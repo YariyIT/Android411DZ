@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DZ4 {
+public class DZ004 {
     public static void main(String[] args){
         int coin, word;
         Scanner input = new Scanner(System.in);

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DZ12 {
+public class DZ012 {
     public static void main(String[] args) {
         System.out.print("Введите длинну стороны квадрата: ");
         int s = side();

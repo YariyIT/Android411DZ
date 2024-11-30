@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DZ3 {
+public class DZ003 {
     public static void main(String[] args){
         System.out.println("Пользователь вводит с клавиатуры пятизначное число.");
         System.out.println("Требуется найти произведение цыфр введённого числа и его среднее арефметическое.");

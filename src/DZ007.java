@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DZ7 {
+public class DZ007 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int osn, empty, full;

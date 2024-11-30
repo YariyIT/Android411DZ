@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DZ10 {
+public class DZ010 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);

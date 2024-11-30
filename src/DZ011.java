@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DZ11 {
+public class DZ011 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Введите, площадь какой фигуры вы хотите найти,\n 1 - прямоугольник, 2 - треугольник, 3 - круг: ");

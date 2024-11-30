@@ -1,4 +1,4 @@
-public class DZ1 {
+public class DZ001 {
     public static void main(String[] args) {
         System.out.println("Переменная типа byte   занимает " + Byte.BYTES + " Байт памяти (" + Byte.SIZE + "  бит памяти), и принимает значения в диапозоне от " + Byte.MIN_VALUE + " до " + Byte.MAX_VALUE);
         System.out.println("Переменная типа short  занимает " + Short.BYTES + " Байт памяти (" + Short.SIZE + " бит памяти), и принимает значения в диапозоне от " + Short.MIN_VALUE + " до " + Short.MAX_VALUE);

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DZ5 {
+public class DZ005 {
     public static void main(String[] args) {
         int hour;
         Scanner input = new Scanner(System.in);

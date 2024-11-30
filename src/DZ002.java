@@ -1,4 +1,4 @@
-public class DZ2 {
+public class DZ002 {
     public static void main(String[] args) {
 
         System.out.printf("--------------------------------%n");

@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class DZ13 {
+public class DZ013 {
 
 
     public static void main(String[] args) {
