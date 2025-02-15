@@ -10,8 +10,12 @@ public class View {
 
     public String waitUserAnswer(){
         System.out.println("========== Редактирование данных каталога фильмов =========");
-        System.out.println("Действие со фильмами:");
-        System.out.println("1 - добавление фильма\n" + "2 - каталог фильмов\n" + "q - выход из программы");
+        System.out.println("Действие с фильмами:");
+        System.out.println("1 - добавление фильма\n" +
+                "2 - каталог фильмов\n" +
+                "3 - просмотр определённого фильма\n" +
+                "4 - удаление фильма\n" +
+                "q - выход из программы");
         System.out.print("Выберите вариант действия: ");
         String userAnswer = input.nextLine();
         System.out.println("===========================================================");
@@ -41,6 +45,40 @@ public class View {
         for (var element : films){
             System.out.println(element);
         }
+        System.out.println("===========================================================");
+    }
+
+    public String getUserFilm(){
+        System.out.println("================== Ввод названия фильма ===================");
+        System.out.print("->");
+        String user_film = input.nextLine();
+        System.out.println();
+        System.out.println("===========================================================");
+        return user_film;
+    }
+
+    public void showSinglFilm(Map film){
+        System.out.println("====================== Вывод фильма =======================");
+        for (Object el : film.entrySet()){
+            System.out.println(el);
+        }
+        System.out.println("===========================================================");
+    }
+    public void showIncorrectTitleError(String userTitle){
+        System.out.println("================== Сообщение об ошибке ====================");
+        System.out.println("Фильм с названием \"" + userTitle + "\" не найден");
+        System.out.println("===========================================================");
+    }
+
+    public void removeSingleFilm(Film film){
+        System.out.println("==================== Удаление фильма ======================");
+        System.out.println("Фильм \"" + film + "\" удалён");
+        System.out.println("===========================================================");
+    }
+
+    public void showIncorrectAnswerError(String answer){
+        System.out.println("================== Сообщение об ошибке ====================");
+        System.out.println("Варианта (" + answer + ") не существует");
         System.out.println("===========================================================");
     }
 }

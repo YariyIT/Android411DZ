@@ -1,14 +1,16 @@
 package DZ036;
 
+import java.io.*;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Model {
     private Map<String, Film> films;
-
+    private String dbName;
     public Model() {
-        this.films = new LinkedHashMap<>();
+        this.dbName = "db.txt";
+        this.films = loadData(); // new LinkedHashMap<>();
     }
 
     public void addFilm(Map dictFilm){
@@ -19,9 +21,43 @@ public class Model {
     public Collection getAllFilm(){
         return films.values();
     }
+    public Map getSingleFilm(String userTitle){
+        Film film = films.get(userTitle);
+        Map<String, String> dictFilm = new LinkedHashMap<>();
+        dictFilm.put("название", film.getTitle());
+        dictFilm.put("жанр", film.getGenre());
+        dictFilm.put("режиссёр", film.getDirector());
+        dictFilm.put("год выпуска", film.getYearOfRelease());
+        dictFilm.put("длительность", film.getDuration());
+        dictFilm.put("студия", film.getAtelier());
+        dictFilm.put("актёры", film.getActors());
+        return dictFilm;
+    }
+
+    public Film removeFilm(String userTitle){
+        return films.remove(userTitle);
+    }
+
+    public void saveData(){
+        try (ObjectOutputStream oss = new ObjectOutputStream(new FileOutputStream(dbName))){
+            oss.writeObject(films);
+        } catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public LinkedHashMap loadData(){
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(dbName))){
+            return (LinkedHashMap) ois.readObject();
+        }catch (Exception ex){
+            return new LinkedHashMap<>();
+        }
+    }
+
+
 }
 
-class Film{
+class Film implements Serializable {
     private String title;
     private String genre;
     private String director;
